@@ -17,6 +17,7 @@ public class Main {
                 hangthing.gameOver = true;
             } else {
                 hangthing.guess();
+                System.out.println(hangthing.statusGraphicAsText());
                 if(hangthing.gameOver) {
                     System.out.println("Verloren. :/");
                 }

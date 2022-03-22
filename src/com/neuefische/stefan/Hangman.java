@@ -67,4 +67,12 @@ public class Hangman {
             index = solution.indexOf(guess, index + 1);
         }
     }
+
+    public String statusGraphicAsText() {
+        String triesWrong = "|||||||||||||||";
+        String triesLeft = "...............";
+        String status = triesWrong.substring(0,wrongCounter);
+        status += triesLeft.substring(wrongCounter, triesLeft.length());
+        return status;
+    }
 }

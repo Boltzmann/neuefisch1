@@ -57,11 +57,16 @@ class HangmanTest {
     public void testisSolutionFound_compareCharArray2SolutionString() {
         Hangman hanger = new Hangman("Joachim");
         "Joachim".getChars(0, 7, hanger.guessedChars, 0);
-        System.out.println(hanger.solution);
-        System.out.println(hanger.guessedChars);
-        System.out.println(hanger.solution.compareTo(hanger.guessedChars.toString()));
-        System.out.println(hanger.solution.charAt(0));
         Assertions.assertTrue(hanger.gotSolution(hanger.guessedChars));
+    }
+
+    @Test
+    public void testHangingPerson() {
+        Hangman hanger= new Hangman("Someone");
+        hanger.wrongCounter = 1;
+        Assertions.assertEquals("|..............", hanger.statusGraphicAsText());
+        hanger.wrongCounter = 15;
+        Assertions.assertEquals("|||||||||||||||", hanger.statusGraphicAsText());
     }
 
 }
