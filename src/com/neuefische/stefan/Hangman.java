@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Hangman {
 
     public short wrongCounter = 0; // If 15, game over.
+    private final short maxTries = 15;
     public boolean done = false;
     public boolean gameOver = false;
     String solution;
@@ -49,7 +50,6 @@ public class Hangman {
         } else {
             wrongCounter++;
         }
-        short maxTries = 15;
         if (wrongCounter >= maxTries) {
             gameOver = true;
         }
@@ -69,10 +69,6 @@ public class Hangman {
     }
 
     public String statusGraphicAsText() {
-        String triesWrong = "|||||||||||||||";
-        String triesLeft = "...............";
-        String status = triesWrong.substring(0,wrongCounter);
-        status += triesLeft.substring(wrongCounter, triesLeft.length());
-        return status;
+        return "|".repeat(wrongCounter) + ".".repeat(maxTries - wrongCounter);
     }
 }
