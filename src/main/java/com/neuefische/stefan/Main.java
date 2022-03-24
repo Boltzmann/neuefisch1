@@ -1,5 +1,7 @@
 package com.neuefische.stefan;
 
+import com.neuefische.stefan.Hangman;
+
 public class Main {
     /**
      * Bonus-Aufgabe
