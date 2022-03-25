@@ -1,7 +1,7 @@
 # Neue Fische Projects
 > Bootcamp project and exercises files. 
 
-This project will have awesome projects. We will see what is happening.
+This project will includes the hangman project. We will see what is happening.
 
 ## Installing / Getting started
 
@@ -19,16 +19,18 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 ```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
+git clone git@github.com:Boltzmann/neuefisch1.git
+cd neuefisch1/
+mvn install
 ```
 
 And state what happens step-by-step.
 
 ### Building
 
-tbd.
+```
+mvn build
+```
 
 ### Deploying / Publishing
 
